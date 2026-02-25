@@ -27,45 +27,62 @@ y: 0.0121
 w: 0.0261
 h: 0.0213
 
+
 🏥 Clinical Impact
+
 Accuracy: MSE ~25 months² (±5 month typical error range)
+
 Speed: Real-time inference (<1 second per image)
+
 Applications: Pediatric growth assessment, endocrine disorder screening
+
 Support: Assists radiologists in bone age evaluation
 
+
+
 🧠 Architecture Components
+
 🏗️ Base Model: ResNet152 (80M+ parameters)
+
 🔄 Pre-training: ImageNet initialization
+
 🎯 Task Head: Custom regression layers
+
 👥 Multi-modal: Image + gender fusion
+
 📐 Input Size: 256×256 RGB images
 
+
 📊 Performance Metrics
+
 Metric	Value	Interpretation
+
 MSE	~25 months²	±5 month typical error
+
 Training Loss	1567.98 → 25.26	98.4% improvement
+
 Convergence	9 epochs	Stable training
+
 Speed	1.69 it/s	Real-time capable
 
+
 🎯 Intended Use Cases
-✅ Recommended Uses	❌ Not Recommended
-🏥 Clinical decision support	🚫 Standalone diagnosis
-📚 Medical education	🚫 Adult bone age
-🔬 Research applications	🚫 Non-hand X-rays
-👨‍⚕️ Radiologist assistance	🚫 Emergency decisions
+
+<img width="378" height="199" alt="image" src="https://github.com/user-attachments/assets/82d0db34-3361-4b5b-a952-230855226ec4" />
+
+
 
 
 📊 Training Performance
+
 📈 Training Progress
-Epoch	Loss	Improvement	Status
-1	1567.98	-	🔴 Starting
-2	178.89	-88.6%	🟡 Learning
-5	63.82	-95.9%	🟠 Converging
-9	24.15	-98.5%	🟢 Best
-10	25.26	-98.4%	🔵 Final
+
+<img width="307" height="239" alt="image" src="https://github.com/user-attachments/assets/ab57d5e4-0d44-4669-90c4-5ac94ac80221" />
+
 
 
 📋 Training Configuration
+
 📦 Dataset: RSNA Bone Age (12,500 images)
 ⏱️ Duration: ~1.5 hours (10 epochs)
 🎯 Optimization: SGD/Adam (details in code)
@@ -74,16 +91,20 @@ Epoch	Loss	Improvement	Status
 
 
 🧠 CNN Architecture Evolution
+
 Traditional CNNs: AlexNet, VGG → Limited medical imaging performance
 ResNet Revolution: Skip connections → Better gradient flow, deeper networks
 Medical Adaptations: Transfer learning + domain-specific fine-tuning
 Multi-modal Integration: Image + metadata fusion for improved accuracy
 
 ⚠️ Important Limitations
+
 🎯 Accuracy Interpretation
+
 MSE ≈ 25 months² means typical errors of ±5 months
 
 🏥 Clinical Considerations
+
 📋 FDA Status: Not FDA approved - research use only
 👨‍⚕️ Professional Oversight: Requires medical supervision
 🎯 Population: Validated on RSNA dataset demographics
@@ -96,6 +117,7 @@ MSE ≈ 25 months² means typical errors of ±5 months
 
 
 🚀 Deployment Options
+
 🔧 Quick Deploy
 Deploy to Hugging Face Spaces AWS SageMaker Google Colab
 
@@ -109,6 +131,7 @@ EXPOSE 8000
 CMD ["python", "app.py"]
 
 ☁️ Cloud Integration
+
 Hugging Face Inference API: Serverless deployment
 AWS Lambda: Cost-effective inference
 Google Cloud Run: Scalable container deployment
