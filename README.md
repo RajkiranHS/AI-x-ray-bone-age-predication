@@ -136,21 +136,34 @@ MSE ≈ 25 months² means typical errors of ±5 months
   Deploy to Hugging Face Spaces AWS SageMaker Google Colab
 
 🐳 Docker Deployment
-FROM pytorch/pytorch:latest
-COPY requirements.txt .
-RUN pip install -r requirements.txt
-COPY . /app
-WORKDIR /app
-EXPOSE 8000
-CMD ["python", "app.py"]
+
+  FROM pytorch/pytorch:latest
+  
+  COPY requirements.txt .
+  
+  RUN pip install -r requirements.txt
+  
+  COPY . /app
+  
+  WORKDIR /app
+  
+  EXPOSE 8000
+  
+  CMD ["python", "app.py"]
+  
 
 ☁️ Cloud Integration
 
   Hugging Face Inference API: Serverless deployment
+  
   AWS Lambda: Cost-effective inference
+  
   Google Cloud Run: Scalable container deployment
+  
   Azure Container Instances: Enterprise integration
+  
   📊 Model Card Information
+  
   
   📈 Performance Summary
   
