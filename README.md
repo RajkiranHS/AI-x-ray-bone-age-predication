@@ -83,11 +83,16 @@ Speed	1.69 it/s	Real-time capable
 
 📋 Training Configuration
 
-📦 Dataset: RSNA Bone Age (12,500 images)
-⏱️ Duration: ~1.5 hours (10 epochs)
-🎯 Optimization: SGD/Adam (details in code)
-📊 Batch Size: ~32 (395 batches/epoch)
-🔄 Best Checkpoint: Epoch 9 (MSE: 24.15)
+  📦 Dataset: RSNA Bone Age (12,500 images)
+
+  ⏱️ Duration: ~1.5 hours (10 epochs)
+
+  🎯 Optimization: SGD/Adam (details in code)
+
+  📊 Batch Size: ~32 (395 batches/epoch)
+
+  🔄 Best Checkpoint: Epoch 9 (MSE: 24.15)
+
 
 
 🧠 CNN Architecture Evolution
@@ -105,21 +110,30 @@ MSE ≈ 25 months² means typical errors of ±5 months
 
 🏥 Clinical Considerations
 
-📋 FDA Status: Not FDA approved - research use only
-👨‍⚕️ Professional Oversight: Requires medical supervision
-🎯 Population: Validated on RSNA dataset demographics
-⚖️ Bias: May vary across different ethnic groups
-🔧 Technical Limitations
-📸 Image Quality: Requires clear, properly positioned hand X-rays
-👶 Age Range: Optimized for pediatric patients (0-18 years)
-💾 Memory: ~1GB RAM required for inference
-⚡ Hardware: GPU recommended for real-time performance
+  📋 FDA Status: Not FDA approved - research use only
+  
+  👨‍⚕️ Professional Oversight: Requires medical supervision
+  
+  🎯 Population: Validated on RSNA dataset demographics
+  
+  ⚖️ Bias: May vary across different ethnic groups
+  
+  🔧 Technical Limitations
+  
+  📸 Image Quality: Requires clear, properly positioned hand X-rays
+  
+  👶 Age Range: Optimized for pediatric patients (0-18 years)
+  
+  💾 Memory: ~1GB RAM required for inference
+  
+  ⚡ Hardware: GPU recommended for real-time performance
+  
 
 
 🚀 Deployment Options
 
 🔧 Quick Deploy
-Deploy to Hugging Face Spaces AWS SageMaker Google Colab
+  Deploy to Hugging Face Spaces AWS SageMaker Google Colab
 
 🐳 Docker Deployment
 FROM pytorch/pytorch:latest
@@ -132,20 +146,33 @@ CMD ["python", "app.py"]
 
 ☁️ Cloud Integration
 
-Hugging Face Inference API: Serverless deployment
-AWS Lambda: Cost-effective inference
-Google Cloud Run: Scalable container deployment
-Azure Container Instances: Enterprise integration
-📊 Model Card Information
-📈 Performance Summary
-🎯 Task: Bone age regression from hand X-rays
-📊 Metric: Mean Squared Error (MSE)
-🏆 Score: ~25 months² (±5 month error range)
-⚡ Speed: Real-time inference capability
-💾 Size: ~320MB (PyTorch), ONNX compatible
-🔬 Training Details
-📦 Dataset: RSNA Bone Age (12,500 images)
-🏗️ Architecture: ResNet152 + custom regression head
-⚙️ Parameters: 80+ million
-📊 Epochs: 10 (best at epoch 9)
-🔄 Convergence: 98.4% loss reduction
+  Hugging Face Inference API: Serverless deployment
+  AWS Lambda: Cost-effective inference
+  Google Cloud Run: Scalable container deployment
+  Azure Container Instances: Enterprise integration
+  📊 Model Card Information
+  
+  📈 Performance Summary
+  
+  🎯 Task: Bone age regression from hand X-rays
+  
+  📊 Metric: Mean Squared Error (MSE)
+  
+  🏆 Score: ~25 months² (±5 month error range)
+  
+  ⚡ Speed: Real-time inference capability
+  
+  💾 Size: ~320MB (PyTorch), ONNX compatible
+  
+  🔬 Training Details
+  
+  📦 Dataset: RSNA Bone Age (12,500 images)
+  
+  🏗️ Architecture: ResNet152 + custom regression head
+  
+  ⚙️ Parameters: 80+ million
+  
+  📊 Epochs: 10 (best at epoch 9)
+  
+  🔄 Convergence: 98.4% loss reduction
+  
